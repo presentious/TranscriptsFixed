@@ -41,10 +41,12 @@
         <script>
           $(document).ready(function() {
             var topOfMedia = $('.presentious-native-embed-wrapper')[0].getBoundingClientRect().top;
+            var mediaPlayerWidth = $('.media-player').width();
             $(window).on("scroll", function(e) {
               var wrap = $("body");
               if (wrap[0].scrollTop > topOfMedia) {
                 wrap.addClass("fixed-media-player");
+                $('.media-player').width(mediaPlayerWidth);
                 $(".transcript-wrapper").css({'padding-top': topOfMedia + 'px'});
               } else {
                 wrap.removeClass("fixed-media-player");

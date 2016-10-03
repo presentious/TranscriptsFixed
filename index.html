@@ -33,11 +33,10 @@
         <script type="text/javascript" src="//presentio.us/t/508de0/embed/fullnative.js"></script>
         <script>
           $(document).ready(function() {
-
             var topOfMedia = $('.presentious-native-embed-wrapper')[0].getBoundingClientRect().top;
             $(window).on("scroll", function(e) {
-               var wrap = $("body")[0];
-              if (wrap.scrollTop > topOfMedia) {
+              var wrap = $("body");
+              if (wrap[0].scrollTop > topOfMedia) {
                 wrap.addClass("fixed-media-player");
               } else {
                 wrap.removeClass("fixed-media-player");

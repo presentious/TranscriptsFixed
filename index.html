@@ -46,8 +46,9 @@
               var wrap = $("body");
               if (wrap[0].scrollTop > topOfMedia) {
                 wrap.addClass("fixed-media-player");
+                var mediaPlayerHeight = $('.media-player').height();
                 $('.media-player').width(mediaPlayerWidth);
-                $(".transcript-wrapper").css({'padding-top': (topOfMedia + 4) + 'px'});
+                $(".transcript-wrapper").css({'padding-top': mediaPlayerHeight + 'px'});
               } else {
                 wrap.removeClass("fixed-media-player");
                 $(".transcript-wrapper").css({'padding-top': '0px'});
